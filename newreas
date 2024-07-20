@@ -1,0 +1,32 @@
+import React from 'react';
+
+const Book = () => {
+  const book = {
+    title: 'To Kill a Mockingbird',
+    author: 'Harper Lee',
+    genre: 'Classic, Fiction',
+    pages: 281,
+    reviews: [
+      'A timeless classic that explores issues of racism and injustice in a small Alabama town.',
+      'A beautifully written novel that has become a staple of American literature.',
+      'A must-read for anyone who loves a good story and wants to learn about the human condition.'
+    ]
+  };
+
+  return (
+    <div>
+      <h1>{book.title}</h1>
+      <p>Author: {book.author}</p>
+      <p>Genre: {book.genre}</p>
+      <p>Pages: {book.pages}</p>
+      <h2>Reviews:</h2>
+      <ul>
+        {book.reviews.map((review, index) => (
+          <li key={index}>{review}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Book;
